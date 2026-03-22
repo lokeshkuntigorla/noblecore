@@ -5,6 +5,7 @@ import "./Navbar.css";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Scroll shrink effect
   useEffect(() => {
@@ -15,9 +16,12 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <nav
-      className={`navbar navbar-expand-lg fixed-top custom-navbar ${
+      className={`navbar navbar-expand-lg navbar-dark fixed-top custom-navbar ${
         scrolled ? "navbar-scrolled" : ""
       }`}
     >
@@ -27,7 +31,10 @@ function Navbar() {
         <Link 
           className="navbar-brand d-flex align-items-center gap-2" 
           to="/"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            closeMenu();
+          }}
         >
           <div className="logo-wrapper">
             <img src={logo} alt="NobleCore Logo" className="brand-logo" />
@@ -37,18 +44,17 @@ function Navbar() {
 
         {/* ===== TOGGLER ===== */}
         <button
-          className="navbar-toggler border-0"
+          className={`navbar-toggler border-0 ${isMenuOpen ? "active" : ""}`}
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
         {/* ===== NAV LINKS ===== */}
         <div
-          className="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
+          className={`collapse navbar-collapse justify-content-end ${isMenuOpen ? "show" : ""}`}
         >
           <ul className="navbar-nav gap-4">
             {[
@@ -61,6 +67,7 @@ function Navbar() {
               <li className="nav-item" key={index}>
                 <NavLink
                   to={item.path}
+                  onClick={closeMenu}
                   className={({ isActive }) =>
                     isActive ? "nav-link active-link" : "nav-link"
                   }

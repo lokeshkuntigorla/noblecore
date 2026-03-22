@@ -76,7 +76,7 @@ function Home() {
           <div className="row align-items-center g-5">
             <div className="col-lg-6" data-aos="fade-up">
               <div className="about-img-grid position-relative">
-                <img src="https://images.unsplash.com/photo-1600880210830-804477c7391b?auto=format&fit=crop&q=80&w=800" alt="Professional Recruitment Team" className="img-fluid rounded-4 shadow-sm mb-4 border-dark-card" />
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Professional Recruitment Team" className="img-fluid rounded-4 shadow-sm mb-4 border-dark-card" />
               </div>
             </div>
             <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
@@ -220,7 +220,7 @@ function Home() {
                   </div>
                 </div>
                 <div className="col-auto">
-                  <div className="teaser-contact-info px-md-5 border-start border-secondary">
+                  <div className="teaser-contact-info px-md-5">
                     <h6 className="text-yellow small mb-1 tracking-widest">EMAIL</h6>
                     <p className="mb-0 fw-bold">info@noblecore.com</p>
                   </div>

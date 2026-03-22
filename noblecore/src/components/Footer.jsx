@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import "./Footer.css";
 
 function Footer() {
@@ -16,10 +16,8 @@ function Footer() {
               Empowering organizations with ethical, quality-driven recruitment solutions and structured workforce transformation.
             </p>
             <div className="social-links d-flex gap-3">
-              <a href="#" className="social-icon-box"><FaFacebook /></a>
-              <a href="#" className="social-icon-box"><FaTwitter /></a>
-              <a href="#" className="social-icon-box"><FaLinkedin /></a>
-              <a href="#" className="social-icon-box"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/company/noblecore-recruitment/" target="_blank" rel="noopener noreferrer" className="social-icon-box"><FaLinkedin /></a>
+              <a href="https://www.instagram.com/noblecorerecruitment?igsh=MWwxcHh3bGUxeTNheA==" target="_blank" rel="noopener noreferrer" className="social-icon-box"><FaInstagram /></a>
             </div>
           </div>
 
@@ -40,14 +38,14 @@ function Footer() {
             <h5 className="fw-bold mb-4 text-yellow uppercase-ls">Candidate Helpline</h5>
             <div className="footer-contact-item mb-3">
                 <p className="mb-0 text-muted small uppercase">Phone & WhatsApp</p>
-                <div className="d-flex align-items-center gap-2">
+                <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-2">
                     <FaWhatsapp className="text-orange" />
-                    <a href="https://wa.me/919910135402" className="fw-bold text-white text-decoration-none">9910135402</a>
+                    <a href="https://wa.me/919910135402" className="small fw-semibold text-white text-decoration-none">9910135402</a>
                 </div>
             </div>
             <div className="footer-contact-item mb-3">
                 <p className="mb-0 text-muted small uppercase">Submit Resume</p>
-                <a href="mailto:talent@noblecore.com" className="fw-bold text-white text-decoration-none">talent@noblecore.com</a>
+                <a href="mailto:talent@noblecore.com" className="small fw-semibold text-white text-decoration-none">talent@noblecore.com</a>
             </div>
           </div>
 
@@ -56,7 +54,7 @@ function Footer() {
             <h5 className="fw-bold mb-4 text-yellow uppercase-ls">General Contact</h5>
             <div className="footer-contact-item mb-3">
                 <p className="mb-0 text-muted small uppercase">Inquiries</p>
-                <a href="mailto:info@noblecore.com" className="fw-bold text-white text-decoration-none">info@noblecore.com</a>
+                <a href="mailto:info@noblecore.com" className="small fw-semibold text-white text-decoration-none">info@noblecore.com</a>
             </div>
           </div>
 

@@ -1,0 +1,37 @@
+/* ================= SERVICES PAGE DARK THEME ================= */
+
+.services-section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--bg-deep-black);
+}
+
+.service-card-container {
+  margin-bottom: var(--section-padding);
+}
+
+.image-hover-wrapper {
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.image-hover-wrapper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 991px) {
+  .service-card-container {
+    text-align: center;
+  }
+  
+  .service-card-container .col-lg-6:first-child {
+    order: 1;
+  }
+  
+  .service-card-container .col-lg-6:last-child {
+    order: 2;
+  }
+  
+  /* Reverse order for alternating cards on mobile if needed, but let's keep it simple for now */
+}

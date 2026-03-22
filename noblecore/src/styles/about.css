@@ -1,0 +1,99 @@
+/* ================= ABOUT PAGE DARK THEME ================= */
+
+.about-wrapper {
+  background-color: var(--bg-deep-black);
+}
+
+/* Hero Section */
+.about-hero {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background: var(--bg-deep-black);
+  min-height: 40vh;
+}
+
+.hero-blob-orange {
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  width: clamp(200px, 30vw, 300px);
+  height: clamp(200px, 30vw, 300px);
+  background: rgba(255, 102, 0, 0.05);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+/* Mission & Vision */
+.mission-vision-section {
+  padding: var(--section-padding) 0;
+  background: radial-gradient(circle at 100% 100%, rgba(255, 102, 0, 0.05), transparent 60%);
+}
+
+.mv-card {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7);
+  padding: clamp(1.5rem, 5vw, 3rem) !important;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-orange);
+  box-shadow: 0 40px 80px -20px rgba(255, 102, 0, 0.2);
+  background-color: #222222;
+}
+
+.mv-icon {
+  font-size: clamp(2rem, 5vw, 3rem);
+  filter: drop-shadow(0 0 15px rgba(255, 102, 0, 0.4));
+}
+
+.mv-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-yellow));
+  border-radius: 3px;
+}
+
+.mv-text {
+  line-height: 1.7;
+  font-size: var(--fs-lead);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+/* Overview Section */
+.overview-section {
+  padding: var(--section-padding) 0;
+}
+
+/* USP Banner */
+.usp-banner {
+  padding: var(--section-padding) 0;
+  background: var(--bg-dark-surface);
+}
+
+/* Why Choose Us */
+.why-choose-section {
+  padding: var(--section-padding) 0;
+}
+
+.benefit-card {
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent !important;
+}
+
+.benefit-card:hover {
+  background-color: var(--bg-dark-surface) !important;
+  transform: translateY(-8px);
+  border-bottom-color: var(--accent-orange) !important;
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+  .about-hero {
+    text-align: center;
+  }
+}

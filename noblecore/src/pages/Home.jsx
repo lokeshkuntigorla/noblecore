@@ -105,8 +105,6 @@ function Home() {
 
               <div className="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="400">
                 <div className="hero-img-wrapper position-relative mx-auto" style={{ maxWidth: "550px" }}>
-                  {/* Decorative elements */}
-                  <div className="position-absolute top-50 start-50 translate-middle bg-orange rounded-circle opacity-10 blur-3xl" style={{ width: '300px', height: '300px', zIndex: -1 }}></div>
                   
                   <img
                     src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"

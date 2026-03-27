@@ -8,8 +8,8 @@
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding-top: calc(var(--section-padding) + 30px);
-  padding-bottom: var(--section-padding);
+  padding-top: calc(var(--section-padding) - 30px);
+  padding-bottom: calc(var(--section-padding) - 30px);
   background: var(--bg-deep-black);
 }
 
@@ -292,7 +292,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: var(--section-padding);
+    padding-top: calc(var(--section-padding) - 20px);
   }
   
   .service-mini-card {

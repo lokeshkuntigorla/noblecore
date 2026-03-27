@@ -2,29 +2,29 @@
   --bg-deep-black: #050505;
   --bg-dark-surface: #0f0f0f;
   --bg-dark-card: #161616;
-  --accent-orange: #ff6600;
-  --accent-yellow: #ffcc00;
-  --text-main: #ffffff;
-  --text-muted: #a0a0a0;
+  --accent-orange: #f87415; /* Richer, more vibrant orange */
+  --accent-yellow: #ffcf33; /* Slightly warmer yellow */
+  --text-main: #f8f9fa; /* Crisper, high-contrast white */
+  --text-muted: #a0aab2; /* Sleek slate gray instead of plain gray */
   --font-primary: 'Outfit', sans-serif;
   --font-secondary: 'Inter', sans-serif;
-  --navbar-height: 80px;
+  --navbar-height: 85px; /* Adjusted from 70px to match actual header height */
 
-  /* Responsive Typography Scale */
-  --fs-base: 1rem;
-  --fs-h1: clamp(2rem, 5vw, 2.75rem);
-  --fs-h2: clamp(1.75rem, 4vw, 2.25rem);
-  --fs-h3: clamp(1.5rem, 3vw, 1.75rem);
-  --fs-h4: 1.5rem;
-  --fs-h5: 1.15rem;
-  --fs-h6: 1rem;
-  --fs-display-lg: clamp(2.5rem, 8vw, 3.5rem);
-  --fs-display-md: clamp(2rem, 6vw, 2.5rem);
-  --fs-lead: clamp(1rem, 2vw, 1.15rem);
+  /* Reduced Typography Scale */
+  --fs-base: 0.95rem; /* Reduced from 1rem */
+  --fs-h1: clamp(1.75rem, 4.5vw, 2.5rem);
+  --fs-h2: clamp(1.5rem, 3.5vw, 2.0rem);
+  --fs-h3: clamp(1.35rem, 3vw, 1.6rem);
+  --fs-h4: 1.35rem;
+  --fs-h5: 1.05rem;
+  --fs-h6: 0.95rem;
+  --fs-display-lg: clamp(2.25rem, 7vw, 3rem);
+  --fs-display-md: clamp(1.75rem, 5vw, 2.25rem);
+  --fs-lead: clamp(0.95rem, 1.8vw, 1.05rem);
 
-  /* Responsive Spacing */
-  --section-padding: clamp(60px, 10vw, 120px);
-  --container-padding: clamp(1rem, 5vw, 4rem);
+  /* Refined Spacing */
+  --section-padding: clamp(60px, 8vw, 100px);
+  --container-padding: clamp(1.5rem, 4vw, 3rem);
 }
 
 * {
@@ -35,20 +35,20 @@
 
 body {
   background-color: var(--bg-deep-black);
-  color: #ffffff;
+  color: var(--text-main);
   font-family: var(--font-secondary);
   font-size: var(--fs-base);
-  line-height: 1.6;
+  line-height: 1.72;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   font-weight: 700;
-  color: #ffffff;
-  letter-spacing: -0.015em;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
   line-height: 1.25;
 }
 
@@ -107,9 +107,9 @@ a {
 
 /* Button System - Corporate & Sleek */
 .btn-orange {
-  background-color: var(--accent-orange);
+  background: linear-gradient(135deg, #ff8c00 0%, #e65c00 100%);
   color: white !important;
-  border: none;
+  border: 1px solid rgba(255, 140, 0, 0.4);
   padding: 12px 30px;
   border-radius: 8px;
   font-weight: 600;
@@ -119,12 +119,14 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 15px rgba(230, 92, 0, 0.15);
 }
 
 .btn-orange:hover {
-  background-color: #e65c00;
+  background: linear-gradient(135deg, #ff9933 0%, #cc5200 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.25);
+  box-shadow: 0 8px 25px rgba(230, 92, 0, 0.3);
+  border-color: rgba(255, 153, 51, 0.6);
 }
 
 .btn-pill {
@@ -146,8 +148,10 @@ a {
 }
 
 .btn-outline-light:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08); /* More subtle */
+  backdrop-filter: blur(5px);
   border-color: #fff !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
 }
 
 .text-orange { color: var(--accent-orange) !important; }
@@ -158,7 +162,7 @@ a {
 /* Global Responsive Adjustments */
 @media (max-width: 991px) {
   :root {
-    --navbar-height: 70px;
+    --navbar-height: 65px;
   }
   
   .btn-orange, .btn-outline-light {

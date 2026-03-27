@@ -6,10 +6,14 @@
 
 /* Hero Section */
 .about-hero {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
-  background: var(--bg-deep-black);
-  min-height: 40vh;
+  padding-top: calc(var(--section-padding) + 80px);
+  padding-bottom: calc(var(--section-padding) + 40px);
+  background: linear-gradient(rgba(5, 5, 5, 0.75), rgba(5, 5, 5, 0.85)), 
+              url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1600');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 75vh;
 }
 
 .hero-blob-orange {
@@ -94,6 +98,56 @@
 /* Responsive Overrides */
 @media (max-width: 991px) {
   .about-hero {
+    min-height: 60vh;
+    padding-top: calc(var(--section-padding) + 60px);
+    padding-bottom: calc(var(--section-padding) + 20px);
     text-align: center;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .about-hero .lead {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+
+  .mission-vision-section {
+    padding: 3rem 0;
+  }
+
+  .mv-card {
+    padding: 2rem !important;
+  }
+
+  .overview-section {
+    padding: 3rem 0;
+  }
+
+  .overview-image-wrapper {
+    margin-top: 2rem;
+  }
+
+  .usp-banner h2 {
+    font-size: 1.8rem;
+  }
+
+  .why-choose-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-hero {
+    min-height: 50vh;
+  }
+  
+  .mv-card {
+    text-align: center;
+  }
+  
+  .mv-divider {
+    margin: 0 auto 1.5rem auto;
   }
 }

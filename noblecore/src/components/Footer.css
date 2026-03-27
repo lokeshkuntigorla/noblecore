@@ -39,9 +39,9 @@
 
 .social-icon-box:hover {
   background: var(--accent-orange);
-  color: #fff;
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.3);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(245, 124, 0, 0.3);
 }
 
 /* ================= Contact Items ================= */

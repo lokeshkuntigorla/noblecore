@@ -19,67 +19,120 @@ function Home() {
   return (
     <div className="home-wrapper">
       {/* ================= HERO SECTION ================= */}
-      <section className="hero-section d-flex align-items-center position-relative overflow-hidden">
+      <section className="hero-section position-relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="hero-premium-bg">
+          <div className="animated-gradient"></div>
+          
+          {/* Floating Shapes */}
+          <div className="floating-shapes">
+            {/* Circles */}
+            <div className="floating-element shape-circle float-slow" style={{ width: '40px', height: '40px', top: '15%', left: '10%' }}></div>
+            <div className="floating-element shape-circle float-med" style={{ width: '20px', height: '20px', top: '70%', left: '15%' }}></div>
+            <div className="floating-element shape-circle float-fast" style={{ width: '60px', height: '60px', top: '40%', right: '12%' }}></div>
+            <div className="floating-element shape-circle float-slow" style={{ width: '30px', height: '30px', top: '25%', left: '45%' }}></div>
+            <div className="floating-element shape-circle float-med" style={{ width: '15px', height: '15px', bottom: '30%', right: '25%' }}></div>
+            
+            {/* Triangles */}
+            <div className="floating-element shape-triangle float-med" style={{ top: '25%', right: '20%', transform: 'rotate(15deg)' }}></div>
+            <div className="floating-element shape-triangle float-slow" style={{ bottom: '20%', left: '25%', transform: 'rotate(-25deg)' }}></div>
+            <div className="floating-element shape-triangle float-fast" style={{ top: '60%', right: '35%', transform: 'rotate(45deg)' }}></div>
+            <div className="floating-element shape-triangle float-med" style={{ top: '10%', left: '30%', transform: 'rotate(-10deg)', borderBottomColor: 'rgba(245, 124, 0, 0.4)' }}></div>
+            
+            {/* Waves */}
+            <svg className="floating-element shape-wave float-slow" width="100" height="30" viewBox="0 0 100 30" style={{ top: '10%', right: '5%' }}>
+              <path d="M0,15 Q25,0 50,15 T100,15" />
+            </svg>
+            <svg className="floating-element shape-wave float-med" width="120" height="40" viewBox="0 0 120 40" style={{ bottom: '15%', right: '15%', transform: 'rotate(-10deg)' }}>
+              <path d="M0,20 Q30,0 60,20 T120,20" />
+            </svg>
+          </div>
+        </div>
+
         <div className="container position-relative z-index-2">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <span className="badge bg-orange-subtle text-orange px-3 py-2 rounded-pill mb-3 fw-bold" data-aos="fade-up">PREMIUM RECRUITMENT SOLUTIONS</span>
-              <h1 className="fw-bold display-4 mb-4 hero-title-reveal">
-                {["Connecting", "Talent", "with"].map((word, i) => (
-                  <span key={i} className="word-reveal" style={{ animationDelay: `${i * 0.15}s` }}>
-                    {word}&nbsp;
-                  </span>
-                ))}
-                <br />
-                <span className="text-orange highlight-word">
-                  {"Opportunity".split("").map((char, i) => (
-                    <span key={i} className="char-reveal" style={{ animationDelay: `${0.6 + i * 0.05}s` }}>
-                      {char}
+          <div className="hero-content-limit">
+            <div className="row align-items-center g-5">
+              <div className="col-lg-6 text-center text-lg-start">
+                <span className="badge bg-orange-subtle text-orange px-3 py-2 rounded-pill mb-4 fw-bold tracking-widest text-uppercase" style={{ fontSize: '0.75rem' }} data-aos="fade-up">
+                  Next-Gen Recruitment
+                </span>
+                
+                <h1 className="fw-bold display-4 mb-4 hero-title-reveal mx-auto mx-lg-0" style={{ lineHeight: '1.2' }}>
+                  {["Connecting", "Talent", "with"].map((word, i) => (
+                    <span key={i} className="word-reveal" style={{ animationDelay: `${i * 0.15}s` }}>
+                      {word}&nbsp;
                     </span>
                   ))}
-                </span>
-              </h1>
-              <p className="lead mb-4 description-reveal">
-                <span className="line-reveal" style={{ animationDelay: "1.4s" }}>
-                  Redefining excellence in hiring and workforce readiness through elite,
-                </span>
-                <span className="line-reveal" style={{ animationDelay: "1.6s" }}>
-                  ethical, and results-driven talent solutions.
-                </span>
-              </p>
-              <div className="d-flex gap-3">
-                <Link to="/services" className="btn btn-orange btn-pill shadow-lg hero-btn">
-                  Our Services →
-                </Link>
-                <Link to="/contact" className="btn btn-outline-light btn-pill">
-                  Contact Us
-                </Link>
+                  <br />
+                  <span className="text-orange highlight-word">
+                    {"Opportunity".split("").map((char, i) => (
+                      <span key={i} className="char-reveal" style={{ animationDelay: `${0.6 + i * 0.05}s` }}>
+                        {char}
+                      </span>
+                    ))}
+                  </span>
+                </h1>
+
+                <div className="description-reveal mb-5 mx-auto mx-lg-0">
+                  <p className="lead text-muted mx-auto mx-lg-0" style={{ maxWidth: "600px" }}>
+                    <span className="line-reveal" style={{ animationDelay: "1.4s" }}>
+                      NobleCore delivers strategic hiring solutions and workforce excellence
+                    </span>
+                    <span className="line-reveal" style={{ animationDelay: "1.6s" }}>
+                      for the modern enterprise.
+                    </span>
+                  </p>
+                </div>
+
+                <div className="d-flex flex-wrap gap-3 mb-5 justify-content-center justify-content-lg-start">
+                  <Link to="/services" className="btn btn-orange btn-pill px-4 py-3 shadow-lg">
+                    Our Services <span className="ms-2">→</span>
+                  </Link>
+                  <Link to="/contact" className="btn btn-outline-light btn-pill px-4 py-3">
+                    Contact Us
+                  </Link>
+                </div>
+
+                <div className="hero-trust-line mb-5 justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="1800">
+                  <div className="trust-dots">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="trust-dot"></div>
+                    ))}
+                  </div>
+                  <span className="text-muted small fw-medium">Trusted by 100+ global enterprises</span>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6 mt-5 mt-lg-0 text-center" data-aos="fade-up" data-aos-delay="200">
-              <div className="hero-img-wrapper position-relative">
-                <img
-                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
-                  alt="Corporate Strategy Boardroom"
-                  className="img-fluid rounded-4 shadow-2xl main-hero-img"
-                />
+
+              <div className="col-lg-6 text-center" data-aos="fade-left" data-aos-delay="400">
+                <div className="hero-img-wrapper position-relative mx-auto" style={{ maxWidth: "550px" }}>
+                  {/* Decorative elements */}
+                  <div className="position-absolute top-50 start-50 translate-middle bg-orange rounded-circle opacity-10 blur-3xl" style={{ width: '300px', height: '300px', zIndex: -1 }}></div>
+                  
+                  <img
+                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1200"
+                    alt="Corporate Strategy Boardroom"
+                    className="img-fluid rounded-4 main-hero-img"
+                    fetchPriority="high"
+                    loading="eager"
+                    decoding="sync"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="hero-shape-orange"></div>
       </section>
 
       {/* ================= ABOUT HIGHLIGHT ================= */}
-      <section className="about-highlight py-5 bg-deep-black text-white">
-        <div className="container py-4">
+      <section className="about-highlight section-py bg-deep-black text-white">
+        <div className="container">
           <div className="row align-items-center g-5">
-            <div className="col-lg-6" data-aos="fade-up">
+            <div className="col-lg-6 order-2 order-lg-1" data-aos="fade-up">
               <div className="about-img-grid position-relative">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Professional Recruitment Team" className="img-fluid rounded-4 shadow-sm mb-4 border-dark-card" />
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" alt="Professional Recruitment Team" className="img-fluid rounded-4 shadow-sm mb-4 border-dark-card" fetchPriority="high" loading="eager" decoding="sync" />
               </div>
             </div>
-            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div className="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
               <h5 className="text-yellow fw-bold mb-3 tracking-widest">ABOUT NOBLECORE</h5>
               <h2 className="fw-bold mb-4 display-6">Bridging the Gap Between <span className="text-orange">Talent</span> and <span className="text-orange">Opportunity</span></h2>
               <p className="text-bright mb-4 fs-5" style={{ lineHeight: "1.7" }}>
@@ -87,11 +140,11 @@ function Home() {
                 dedicated to enhancing organizational efficiency through quality-driven hiring.
               </p>
               <div className="mb-5">
-                <div className="d-flex align-items-center gap-3 mb-3">
+                <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 mb-3">
                   <div className="check-icon-circle bg-orange-subtle text-orange">✓</div>
                   <span className="fw-semibold text-light">Ethical and Results-driven approach</span>
                 </div>
-                <div className="d-flex align-items-center gap-3 mb-3">
+                <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-3 mb-3">
                   <div className="check-icon-circle bg-orange-subtle text-orange">✓</div>
                   <span className="fw-semibold text-light">Customized hiring for IT & Non-IT sectors</span>
                 </div>
@@ -108,8 +161,8 @@ function Home() {
       <CEOSection darkMode={true} />
 
       {/* ================= SERVICES PREVIEW ================= */}
-      <section className="services-preview py-5 bg-dark-surface position-relative overflow-hidden">
-        <div className="container py-5">
+      <section className="services-preview section-py bg-dark-surface position-relative overflow-hidden">
+        <div className="container">
           <div className="text-center mb-5" data-aos="fade-up">
             <h5 className="text-yellow fw-bold mb-3">OUR SERVICES</h5>
             <h2 className="fw-bold display-6 mb-3 text-white">Delivering Excellence Across Sectors</h2>
@@ -153,8 +206,8 @@ function Home() {
       </section>
 
       {/* ================= WHY CHOOSE US PREVIEW ================= */}
-      <section className="why-preview py-5 bg-deep-black">
-        <div className="container py-5">
+      <section className="why-preview section-py bg-deep-black">
+        <div className="container">
           <div className="row g-5 align-items-center">
             <div className="col-lg-6" data-aos="fade-up">
               <h5 className="text-yellow fw-bold mb-3">WHY TRUST US</h5>
@@ -204,8 +257,8 @@ function Home() {
       </section>
 
       {/* ================= CONTACT TEASER ================= */}
-      <section className="contact-teaser py-5 bg-dark-surface">
-        <div className="container py-4">
+      <section className="contact-teaser section-py bg-dark-surface">
+        <div className="container">
           <div className="contact-teaser-card p-5 bg-deep-black text-white rounded-4 shadow-2xl text-center position-relative overflow-hidden border-orange-subtle" data-aos="fade-up">
             <div className="teaser-bg-overlay-orange"></div>
             <div className="position-relative z-index-2">

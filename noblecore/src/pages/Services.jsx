@@ -78,7 +78,7 @@ function Services() {
                   </li>
                 ))}
               </ul>
-              <p className="mb-0 fst-italic fs-6" style={{ opacity: 0.8 }}>{service.description}</p>
+              <p className="mb-0 fst-italic fs-6 text-muted">{service.description}</p>
             </div>
           </div>
         </div>

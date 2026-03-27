@@ -4,12 +4,12 @@ import "./CEOSection.css";
 
 function CEOSection({ darkMode = true }) {
   return (
-    <section className={`ceo-section py-5 ${darkMode ? 'bg-deep-black' : 'bg-light'}`}>
+    <section className={`ceo-section section-py ${darkMode ? 'bg-deep-black' : 'bg-light'}`}>
       <div className="container">
         <div className="row align-items-center g-5">
 
           {/* Image Side */}
-          <div className="col-lg-5" data-aos="fade-up">
+          <div className="col-lg-5 order-2 order-lg-1" data-aos="fade-up">
             <div className="ceo-image-wrapper border-orange-subtle shadow-2xl">
               <img
                 src={ceo}
@@ -24,7 +24,7 @@ function CEOSection({ darkMode = true }) {
           </div>
 
           {/* Content Side */}
-          <div className="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+          <div className="col-lg-7 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="100">
             <h5 className="text-yellow fw-bold mb-3 tracking-widest">LEADERSHIP VISION</h5>
             <h2 className="ceo-title text-white fw-bold mb-4 display-5">Driving Strategic <span className="text-orange">Excellence</span></h2>
 
@@ -43,21 +43,21 @@ function CEOSection({ darkMode = true }) {
 
             <div className="row g-3 mb-4">
               <div className="col-sm-6">
-                <div className="d-flex align-items-center gap-2 mb-2">
+                <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mb-2">
                   <span className="text-orange fw-bold">✓</span>
                   <span className="text-light small fw-semibold">Lean Six Sigma Excellence</span>
                 </div>
-                <div className="d-flex align-items-center gap-2">
+                <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-2">
                   <span className="text-orange fw-bold">✓</span>
                   <span className="text-light small fw-semibold">Performance-Driven Results</span>
                 </div>
               </div>
               <div className="col-sm-6">
-                <div className="d-flex align-items-center gap-2 mb-2">
+                <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-2 mb-2">
                   <span className="text-orange fw-bold">✓</span>
                   <span className="text-light small fw-semibold">Ethical Talent Sourcing</span>
                 </div>
-                <div className="d-flex align-items-center gap-2">
+                <div className="d-flex align-items-center justify-content-center justify-content-lg-start gap-2">
                   <span className="text-orange fw-bold">✓</span>
                   <span className="text-light small fw-semibold">Workforce Transformation</span>
                 </div>

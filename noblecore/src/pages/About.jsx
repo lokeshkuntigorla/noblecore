@@ -32,8 +32,8 @@ function About() {
       </section>
 
       {/* ================= MISSION & VISION ================= */}
-      <section className="mission-vision-section py-5">
-        <div className="container py-5">
+      <section className="mission-vision-section section-py">
+        <div className="container">
           <div className="row g-5">
             <div className="col-lg-6" data-aos="fade-up">
               <div className="mv-card p-5 rounded-4 h-100 position-relative overflow-hidden">
@@ -60,8 +60,8 @@ function About() {
       </section>
 
       {/* ================= COMPANY OVERVIEW ================= */}
-      <section className="overview-section py-5 bg-deep-black">
-        <div className="container py-4">
+      <section className="overview-section section-py bg-deep-black">
+        <div className="container">
           <div className="row align-items-center g-5">
             <div className="col-lg-6" data-aos="fade-up">
               <span className="badge bg-orange text-white mb-3 px-3 py-2 rounded-pill fw-bold">ESTABLISHED 2025</span>
@@ -103,7 +103,7 @@ function About() {
       <CEOSection darkMode={true} />
 
       {/* ================= USP SECTION ================= */}
-      <section className="usp-banner py-5 text-white text-center position-relative overflow-hidden bg-dark-surface">
+      <section className="usp-banner section-py text-white text-center position-relative overflow-hidden bg-dark-surface">
         <div className="banner-bg-dark"></div>
         <div className="container position-relative z-index-2" data-aos="fade-up">
           <h2 className="mb-4 text-orange fw-bold display-5">
@@ -117,8 +117,8 @@ function About() {
       </section>
 
       {/* ================= WHY CHOOSE US ================= */}
-      <section className="why-choose-section py-5 bg-deep-black text-center">
-        <div className="container py-4">
+      <section className="why-choose-section section-py bg-deep-black text-center">
+        <div className="container">
           <div data-aos="fade-up">
             <h2 className="mb-4 fw-bold display-6 text-white">Why Choose <span className="text-orange">NobleCore</span>?</h2>
           </div>

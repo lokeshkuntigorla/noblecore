@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import "./WhatsAppButton.css";
 
 const WhatsAppButton = () => {
@@ -22,7 +22,7 @@ const WhatsAppButton = () => {
     setInitialPos({ x: position.x, y: position.y });
   };
 
-  const handleMove = (clientX, clientY) => {
+  const handleMove = useCallback((clientX, clientY) => {
     if (!isDragging) return;
     
     const dx = clientX - dragStart.x;
@@ -36,11 +36,11 @@ const WhatsAppButton = () => {
       x: initialPos.x + dx,
       y: initialPos.y + dy
     });
-  };
+  }, [isDragging, dragStart, initialPos]);
 
-  const handleEnd = () => {
+  const handleEnd = useCallback(() => {
     setIsDragging(false);
-  };
+  }, []);
 
   // Mouse Events
   const onMouseDown = (e) => handleStart(e.clientX, e.clientY);
@@ -66,7 +66,7 @@ const WhatsAppButton = () => {
       window.removeEventListener("touchmove", onTouchMove);
       window.removeEventListener("touchend", onEnd);
     };
-  }, [isDragging, dragStart, initialPos]);
+  }, [isDragging, handleMove, handleEnd]);
 
   const handleClick = (e) => {
     if (hasMoved) {

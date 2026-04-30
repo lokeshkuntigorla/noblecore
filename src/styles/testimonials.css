@@ -1,0 +1,17 @@
+/* ================= TESTIMONIALS PAGE ================= */
+
+.testimonials-section {
+  padding: 70px 0;
+}
+
+.testimonial-card {
+  padding: 25px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}

@@ -1,0 +1,172 @@
+:root {
+  --bg-deep-black: #050505;
+  --bg-dark-surface: #0f0f0f;
+  --bg-dark-card: #161616;
+  --accent-orange: #f87415; /* Richer, more vibrant orange */
+  --accent-yellow: #ffcf33; /* Slightly warmer yellow */
+  --text-main: #f8f9fa; /* Crisper, high-contrast white */
+  --text-muted: #a0aab2; /* Sleek slate gray instead of plain gray */
+  --font-primary: 'Outfit', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+  --navbar-height: 85px; /* Adjusted from 70px to match actual header height */
+
+  /* Reduced Typography Scale */
+  --fs-base: 0.95rem; /* Reduced from 1rem */
+  --fs-h1: clamp(1.75rem, 4.5vw, 2.5rem);
+  --fs-h2: clamp(1.5rem, 3.5vw, 2.0rem);
+  --fs-h3: clamp(1.35rem, 3vw, 1.6rem);
+  --fs-h4: 1.35rem;
+  --fs-h5: 1.05rem;
+  --fs-h6: 0.95rem;
+  --fs-display-lg: clamp(2.25rem, 7vw, 3rem);
+  --fs-display-md: clamp(1.75rem, 5vw, 2.25rem);
+  --fs-lead: clamp(0.95rem, 1.8vw, 1.05rem);
+
+  /* Refined Spacing */
+  --section-padding: clamp(60px, 8vw, 100px);
+  --container-padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep-black);
+  color: var(--text-main);
+  font-family: var(--font-secondary);
+  font-size: var(--fs-base);
+  line-height: 1.72;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+h5 { font-size: var(--fs-h5); }
+h6 { font-size: var(--fs-h6); }
+
+/* Overriding Bootstrap Display Classes for Corporate Tone */
+.display-4 { font-size: var(--fs-display-lg); font-weight: 700; letter-spacing: -0.02em; }
+.display-6 { font-size: var(--fs-display-md); font-weight: 700; }
+
+.lead {
+  font-size: var(--fs-lead);
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.text-muted {
+  color: #b0b0b0 !important;
+}
+
+.text-bright {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep-black);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-dark-card);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-orange);
+}
+
+/* Section Wrapper Utilities */
+.section-py {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+/* Button System - Corporate & Sleek */
+.btn-orange {
+  background: linear-gradient(135deg, #ff8c00 0%, #e65c00 100%);
+  color: white !important;
+  border: 1px solid rgba(255, 140, 0, 0.4);
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(230, 92, 0, 0.15);
+}
+
+.btn-orange:hover {
+  background: linear-gradient(135deg, #ff9933 0%, #cc5200 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(230, 92, 0, 0.3);
+  border-color: rgba(255, 153, 51, 0.6);
+}
+
+.btn-pill {
+  border-radius: 50px !important;
+}
+
+.btn-sleek {
+  padding: 10px 24px;
+}
+
+.btn-outline-light {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #fff !important;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.08); /* More subtle */
+  backdrop-filter: blur(5px);
+  border-color: #fff !important;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.text-orange { color: var(--accent-orange) !important; }
+.text-yellow { color: var(--accent-yellow) !important; }
+.bg-dark-surface { background-color: var(--bg-dark-surface) !important; }
+.bg-dark-card { background-color: var(--bg-dark-card) !important; }
+
+/* Global Responsive Adjustments */
+@media (max-width: 991px) {
+  :root {
+    --navbar-height: 65px;
+  }
+  
+  .btn-orange, .btn-outline-light {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}

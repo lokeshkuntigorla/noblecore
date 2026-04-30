@@ -1,0 +1,16 @@
+/* ================= GLOBAL APP STYLES ================= */
+
+.page-container {
+  min-height: 100vh;
+  background-color: var(--bg-deep-black);
+}
+
+/* Global Transitions */
+.transition-300 {
+  transition: all 0.3s ease;
+}
+
+.z-index-2 {
+  position: relative;
+  z-index: 2;
+}

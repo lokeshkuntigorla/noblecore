@@ -54,7 +54,7 @@ function Footer() {
             <h5 className="fw-bold mb-4 text-yellow uppercase-ls">General Contact</h5>
             <div className="footer-contact-item mb-3">
                 <p className="mb-0 text-muted small uppercase">Inquiries</p>
-                <a href="chetanya@noblecore-hr.in" className="small fw-semibold text-white text-decoration-none">chetanya@noblecore-hr.in</a>
+                <a href="mailto:chetanya@noblecore-hr.in" className="small fw-semibold text-white text-decoration-none">chetanya@noblecore-hr.in</a>
             </div>
           </div>
 

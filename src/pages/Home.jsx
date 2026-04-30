@@ -273,7 +273,7 @@ function Home() {
                 <div className="col-auto">
                   <div className="teaser-contact-info px-md-5">
                     <h6 className="text-yellow small mb-1 tracking-widest">EMAIL</h6>
-                    <p className="mb-0 fw-bold">info@noblecore.com</p>
+                    <p className="mb-0 fw-bold">chetanya@noblecore-hr.in</p>
                   </div>
                 </div>
               </div>

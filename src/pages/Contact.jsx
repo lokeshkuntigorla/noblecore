@@ -96,7 +96,7 @@ function Contact() {
                   <span className="fs-5">✉️</span>
                   <div>
                     <h6 className="mb-0 small text-yellow fw-bold">Email</h6>
-                    <p className="mb-0 small fw-bold text-white"><a href="mailto:info@noblecore.com" className="text-inherit">info@noblecore.com</a></p>
+                    <p className="mb-0 small fw-bold text-white"><a href="mailto:chetanya@noblecore-hr.in" className="text-inherit">chetanya@noblecore-hr.in</a></p>
                   </div>
                 </div>
               </div>
